@@ -23,18 +23,20 @@ export default function Layout({ children, title, description }) {
       </Head>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+          <div className="flex items-center justify-between gap-4">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
                 <span className="text-white font-bold text-lg">JD</span>
               </div>
-              <span className="font-semibold text-primary hidden sm:inline">Jeet Desai</span>
+              <div>
+                <p className="text-sm font-semibold text-slate-900">Jeet Desai</p>
+                <p className="text-xs text-slate-500">AI-Augmented Architect</p>
+              </div>
             </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
               <Link href="/" className="hover:text-primary transition">Home</Link>
               <Link href="/about" className="hover:text-primary transition">About</Link>
               <Link href="/projects" className="hover:text-primary transition">Projects</Link>
@@ -42,9 +44,15 @@ export default function Layout({ children, title, description }) {
               <Link href="/contact" className="hover:text-primary transition">Contact</Link>
             </div>
 
+            <div className="hidden md:flex items-center">
+              <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90">
+                Let's Connect
+              </Link>
+            </div>
+
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden"
+              className="md:hidden text-slate-700"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -56,12 +64,12 @@ export default function Layout({ children, title, description }) {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden pt-4 space-y-2 border-t mt-4">
-              <Link href="/" className="block py-2 hover:text-primary transition">Home</Link>
-              <Link href="/about" className="block py-2 hover:text-primary transition">About</Link>
-              <Link href="/projects" className="block py-2 hover:text-primary transition">Projects</Link>
-              <Link href="/blog" className="block py-2 hover:text-primary transition">Blog</Link>
-              <Link href="/contact" className="block py-2 hover:text-primary transition">Contact</Link>
+            <div className="md:hidden pt-4 space-y-2 border-t border-gray-200 mt-4">
+              <Link href="/" className="block py-2 text-slate-700 hover:text-primary transition">Home</Link>
+              <Link href="/about" className="block py-2 text-slate-700 hover:text-primary transition">About</Link>
+              <Link href="/projects" className="block py-2 text-slate-700 hover:text-primary transition">Projects</Link>
+              <Link href="/blog" className="block py-2 text-slate-700 hover:text-primary transition">Blog</Link>
+              <Link href="/contact" className="block py-2 text-slate-700 hover:text-primary transition">Contact</Link>
             </div>
           )}
         </div>
@@ -73,35 +81,36 @@ export default function Layout({ children, title, description }) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-dark text-light py-12 mt-20">
+      <footer className="bg-slate-950 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div>
-              <h3 className="font-semibold mb-4">About</h3>
-              <p className="text-sm text-gray-400">
-                Building intelligent systems that automate, scale & drive business impact.
+              <h3 className="text-lg font-semibold mb-4">Jeet Desai</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                AI-Augmented Software Architect building intelligent systems, automation, and scalable software platforms.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Links</h3>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li><Link href="/about" className="hover:text-primary transition">About</Link></li>
-                <li><Link href="/projects" className="hover:text-primary transition">Projects</Link></li>
-                <li><Link href="/blog" className="hover:text-primary transition">Blog</Link></li>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-3 text-sm text-slate-400">
+                <li><Link href="/about" className="hover:text-white transition">About</Link></li>
+                <li><Link href="/projects" className="hover:text-white transition">Projects</Link></li>
+                <li><Link href="/blog" className="hover:text-white transition">Blog</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Contact</h3>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li><a href="mailto:jeetdesai32800@gmail.com" className="hover:text-primary transition">Email</a></li>
-                <li><a href="https://linkedin.com/in/jeethdesai" className="hover:text-primary transition">LinkedIn</a></li>
-                <li><a href="https://github.com/jeetdesai" className="hover:text-primary transition">GitHub</a></li>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <ul className="space-y-3 text-sm text-slate-400">
+                <li><a href="mailto:jeetdesai32800@gmail.com" className="hover:text-white transition">jeetdesai32800@gmail.com</a></li>
+                <li><a href="https://linkedin.com/in/jeethdesai" className="hover:text-white transition">LinkedIn</a></li>
+                <li><a href="https://github.com/jeetdesai" className="hover:text-white transition">GitHub</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-700 pt-8 flex justify-between items-center">
-            <p className="text-sm text-gray-400">&copy; 2024 Jeet Desai. All rights reserved.</p>
-            <p className="text-sm text-gray-400">Built with Next.js & Tailwind CSS</p>
+          <div className="border-t border-slate-800 pt-8 flex flex-col lg:flex-row justify-between gap-4 text-sm text-slate-500">
+            <p>© 2024 Jeet Desai. All rights reserved.</p>
+            <p>Built with Next.js & Tailwind CSS</p>
           </div>
         </div>
       </footer>

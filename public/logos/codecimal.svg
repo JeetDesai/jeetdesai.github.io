@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
+  <rect width="240" height="120" rx="24" fill="#0F172A"/>
+  <text x="120" y="72" font-family="Inter, sans-serif" font-size="28" fill="#F59E0B" font-weight="800" text-anchor="middle">Jeet</text>
+  <text x="120" y="98" font-family="Inter, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Codecimal</text>
+</svg>
