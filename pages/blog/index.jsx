@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
+import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { articles } from '@/data/articles';
+import { articles } from '../../data/articles';
 import { useState } from 'react';
 
 export default function BlogPage() {

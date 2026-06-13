@@ -1,7 +1,7 @@
-import Layout from '@/components/Layout';
+import Layout from '../components/Layout';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
-import { testimonials } from '@/data/testimonials';
+import { projects } from '../data/projects';
+import { testimonials } from '../data/testimonials';
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
@@ -147,20 +147,32 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">What Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.slice(0, 2).map((testimonial) => (
-              <div key={testimonial.id} className="bg-light p-8 rounded-lg">
-                <div className="flex items-center mb-4">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold">LinkedIn Recommendations</p>
+            <h2 className="text-3xl md:text-4xl font-bold mt-4">What my clients say</h2>
+            <p className="max-w-2xl mx-auto text-gray-600 mt-4">
+              Real recommendations from your LinkedIn network. These quotes highlight the leadership, reliability, and developer excellence delivered across multiple Rails and cloud engagements.
+            </p>
+            <div className="mt-6">
+              <a href="https://www.linkedin.com/in/jeethdesai/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full border border-primary bg-white px-6 py-3 text-sm font-semibold text-primary shadow-sm transition hover:bg-primary hover:text-white">
+                View more recommendations on LinkedIn
+              </a>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-light p-8 rounded-3xl shadow-sm border border-gray-200">
+                <div className="flex items-center mb-5">
                   {testimonial.image && (
-                    <img src={testimonial.image} alt={testimonial.author} className="w-12 h-12 rounded-full mr-4" />
+                    <img src={testimonial.image} alt={testimonial.author} className="w-14 h-14 rounded-full mr-4 object-cover" />
                   )}
                   <div>
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <p className="font-semibold text-lg">{testimonial.author}</p>
+                    <p className="text-sm text-gray-600">{testimonial.role} · {testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 italic leading-relaxed">“{testimonial.content}”</p>
+                <div className="mt-6 text-sm text-gray-500 uppercase tracking-[0.18em]">Source: LinkedIn</div>
               </div>
             ))}
           </div>

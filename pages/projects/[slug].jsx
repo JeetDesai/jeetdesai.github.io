@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
+import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { projects, getProjectBySlug } from '@/data/projects';
+import { projects, getProjectBySlug } from '../../data/projects';
 
 export async function getStaticProps({ params }) {
   const project = getProjectBySlug(params.slug);

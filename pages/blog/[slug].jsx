@@ -1,6 +1,6 @@
-import Layout from '@/components/Layout';
+import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { articles, getArticleBySlug } from '@/data/articles';
+import { articles, getArticleBySlug } from '../../data/articles';
 
 export async function getStaticProps({ params }) {
   const article = getArticleBySlug(params.slug);
