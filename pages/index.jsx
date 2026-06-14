@@ -37,7 +37,7 @@ export default function Home() {
                   <span className="text-orange-500">✦</span>
                   AI + Automation + Backend Systems
                 </div>
-                <h1 className="mt-8 max-w-[10.5ch] text-[3rem] font-extrabold leading-[0.96] tracking-[-0.05em] text-slate-900 sm:text-[4.25rem] lg:text-[4.9rem]">
+                <h1 className="mt-8 max-w-[14ch] text-[3rem] font-extrabold leading-[0.96] tracking-[-0.05em] text-slate-900 sm:text-[4.25rem] lg:text-[4.9rem]">
                   I build AI powered
                   <br />
                   <span className="text-orange-500">automation systems</span>
@@ -47,7 +47,7 @@ export default function Home() {
                   smarter
                 </h1>
                 <p className="mt-7 max-w-[31rem] text-lg leading-8 text-slate-600">
-                  I help businesses automate workflows, integrate AI capabilities, and build scalable backend systems that save time, reduce manual work, and drive real results.
+                  I help businesses transform manual operations into intelligent, scalable systems by combining AI, automation, and robust software engineering. From document processing and workflow automation to backend platforms and AI-powered applications, I build solutions that reduce operational overhead, improve efficiency, and deliver measurable business outcomes.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <Link href="/contact" className="inline-flex min-w-[176px] items-center justify-center gap-3 rounded-2xl bg-orange-500 px-8 py-4 text-base font-semibold text-white shadow-[0_20px_40px_rgba(249,115,22,0.26)] transition hover:bg-orange-600">
