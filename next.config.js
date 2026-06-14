@@ -21,24 +21,6 @@ const nextConfig = {
     SITE_DESCRIPTION: 'Building intelligent systems that automate, scale & drive business impact.',
   },
 
-  // SEO & sitemap
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/index.html',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=3600' },
-        ],
-      },
-    ];
-  },
-
   webpack: (config, { dev }) => {
     if (dev) {
       config.watchOptions = {
