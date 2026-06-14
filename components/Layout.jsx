@@ -24,8 +24,8 @@ export default function Layout({ children, title, description }) {
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex items-center justify-between gap-6">
             <Link href="/" className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
                 <span className="text-white font-bold text-lg">JD</span>
@@ -37,15 +37,17 @@ export default function Layout({ children, title, description }) {
             </Link>
 
             <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-              <Link href="/" className="hover:text-primary transition">Home</Link>
-              <Link href="/about" className="hover:text-primary transition">About</Link>
-              <Link href="/projects" className="hover:text-primary transition">Projects</Link>
-              <Link href="/blog" className="hover:text-primary transition">Blog</Link>
-              <Link href="/contact" className="hover:text-primary transition">Contact</Link>
+              <Link href="/" className="text-slate-950 border-b-2 border-orange-600 pb-1 transition">Home</Link>
+              <Link href="/about" className="hover:text-orange-600 transition">About</Link>
+              <Link href="/expertise" className="hover:text-orange-600 transition">Expertise</Link>
+              <Link href="/projects" className="hover:text-orange-600 transition">Case Studies</Link>
+              <Link href="/articles" className="hover:text-orange-600 transition">Articles</Link>
+              <Link href="/tools" className="hover:text-orange-600 transition">Tools</Link>
+              <Link href="/contact" className="hover:text-orange-600 transition">Contact</Link>
             </div>
 
             <div className="hidden md:flex items-center">
-              <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90">
+              <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200/40 transition hover:bg-orange-700">
                 Let's Connect
               </Link>
             </div>
@@ -65,11 +67,13 @@ export default function Layout({ children, title, description }) {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden pt-4 space-y-2 border-t border-gray-200 mt-4">
-              <Link href="/" className="block py-2 text-slate-700 hover:text-primary transition">Home</Link>
-              <Link href="/about" className="block py-2 text-slate-700 hover:text-primary transition">About</Link>
-              <Link href="/projects" className="block py-2 text-slate-700 hover:text-primary transition">Projects</Link>
-              <Link href="/blog" className="block py-2 text-slate-700 hover:text-primary transition">Blog</Link>
-              <Link href="/contact" className="block py-2 text-slate-700 hover:text-primary transition">Contact</Link>
+              <Link href="/" className="block py-2 text-slate-700 hover:text-orange-600 transition">Home</Link>
+              <Link href="/about" className="block py-2 text-slate-700 hover:text-orange-600 transition">About</Link>
+              <Link href="/expertise" className="block py-2 text-slate-700 hover:text-orange-600 transition">Expertise</Link>
+              <Link href="/projects" className="block py-2 text-slate-700 hover:text-orange-600 transition">Case Studies</Link>
+              <Link href="/articles" className="block py-2 text-slate-700 hover:text-orange-600 transition">Articles</Link>
+              <Link href="/tools" className="block py-2 text-slate-700 hover:text-orange-600 transition">Tools</Link>
+              <Link href="/contact" className="block py-2 text-slate-700 hover:text-orange-600 transition">Contact</Link>
             </div>
           )}
         </div>

@@ -8,6 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test:ui": "playwright test",
+    "test:ui:page-screenshot": "playwright test tests/ui/page-screenshot.spec.js --reporter=line",
+    "test:ui:homepage-screenshot": "playwright test tests/ui/homepage.spec.js -g \"captures a desktop full-page homepage screenshot\" --reporter=line",
+    "test:ui:headed": "playwright test --headed",
     "export": "next build && next export",
     "analyze": "ANALYZE=true next build"
   },
@@ -25,6 +29,7 @@
     "postcss": "^8.4.24",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
-    "eslint-config-next": "^14.0.0"
+    "eslint-config-next": "^14.0.0",
+    "@playwright/test": "1.60.0"
   }
 }

@@ -1,5 +1,4 @@
 import Layout from '../../components/Layout';
-import Link from 'next/link';
 import { projects } from '../../data/projects';
 
 export default function ProjectsPage() {
@@ -23,8 +22,14 @@ export default function ProjectsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project) => (
-              <Link key={project.id} href={`/projects/${project.slug}`}>
-                <div className="group cursor-pointer">
+              <a
+                key={project.id}
+                href={project.externalUrl || `/projects/${project.slug}`}
+                target={project.externalUrl ? '_blank' : undefined}
+                rel={project.externalUrl ? 'noreferrer noopener' : undefined}
+                className="group block cursor-pointer"
+              >
+                <div>
                   <div className="bg-light rounded-lg overflow-hidden mb-4 h-64 relative">
                     {project.image ? (
                       <img 
@@ -62,7 +67,7 @@ export default function ProjectsPage() {
                     )}
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

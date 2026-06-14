@@ -135,7 +135,13 @@ export default function ProjectDetail({ project }) {
             <h2 className="text-3xl font-bold mb-12">Related Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedProjects.map((p) => (
-                <Link key={p.id} href={`/projects/${p.slug}`}>
+                <a
+                  key={p.id}
+                  href={p.externalUrl || `/projects/${p.slug}`}
+                  target={p.externalUrl ? '_blank' : undefined}
+                  rel={p.externalUrl ? 'noreferrer noopener' : undefined}
+                  className="block"
+                >
                   <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer h-full flex flex-col">
                     {p.image && (
                       <div className="w-full h-48 bg-gray-300 overflow-hidden">
@@ -154,7 +160,7 @@ export default function ProjectDetail({ project }) {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

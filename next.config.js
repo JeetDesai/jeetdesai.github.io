@@ -38,6 +38,23 @@ const nextConfig = {
       },
     ];
   },
+
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      config.watchOptions = {
+        ...config.watchOptions,
+        ignored: [
+          '**/.git/**',
+          '**/.next/**',
+          '**/node_modules/**',
+          '**/playwright-report/**',
+          '**/test-results/**',
+        ],
+      };
+    }
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;

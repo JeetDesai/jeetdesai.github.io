@@ -20,73 +20,56 @@ export default function Home() {
       description="AI-Augmented Software Architect building intelligent systems that automate, scale & drive business impact"
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#fcf6f0] py-24 lg:py-32">
+      <section className="relative overflow-hidden bg-white pt-14 pb-24 lg:pt-16 lg:pb-28">
         <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-white to-transparent" />
-        <div className="absolute right-0 top-24 hidden xl:block h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute left-0 top-40 hidden xl:block h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
-            <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary shadow-sm shadow-slate-900/5">
-                AI-Augmented Engineering Leader
-              </span>
-              <h1 className="mt-8 text-4xl md:text-6xl font-extrabold tracking-[-0.04em] leading-tight text-slate-950">
-                Building Intelligent Systems
-                <br />
-                <span className="text-accent">That Automate, Scale &</span>
-                <br />
-                Drive Business Impact.
-              </h1>
-              <p className="mt-8 text-lg md:text-xl text-slate-700 max-w-xl leading-relaxed">
-                I help businesses eliminate manual work, accelerate engineering delivery, and build scalable software systems using AI-driven automation, clean architecture, and modern DevOps practices.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link href="/projects" className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition">
-                  View Case Studies
-                </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-950 shadow-sm hover:shadow-md transition">
-                  Let's Connect
-                </Link>
+        <div className="relative px-4 sm:px-6 lg:px-8">
+          <div className="relative isolate overflow-hidden rounded-[40px] bg-[#fffaf4] shadow-[0_30px_70px_rgba(232,179,125,0.16)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,210,160,0.18),transparent_18%),radial-gradient(circle_at_78%_50%,rgba(255,196,122,0.2),transparent_18%)]" />
+            <img
+              src="/hero-banner.png"
+              alt="AI workflow banner showing inputs, AI logic, automation, and results"
+              className="block min-h-[720px] w-full object-cover object-center lg:min-h-[760px]"
+            />
+
+            <div className="absolute inset-0 z-10 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
+              <div className="flex h-full max-w-full flex-col justify-start lg:max-w-[56%]">
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-orange-300 bg-white/86 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#8c633d] shadow-[0_12px_30px_rgba(255,255,255,0.45)] backdrop-blur-[4px]">
+                  <span className="text-orange-500">✦</span>
+                  AI + Automation + Backend Systems
+                </div>
+                <h1 className="mt-8 max-w-[10.5ch] text-[3rem] font-extrabold leading-[0.96] tracking-[-0.05em] text-slate-900 sm:text-[4.25rem] lg:text-[4.9rem]">
+                  I build AI powered
+                  <br />
+                  <span className="text-orange-500">automation systems</span>
+                  <br />
+                  that run your business
+                  <br />
+                  smarter
+                </h1>
+                <p className="mt-7 max-w-[31rem] text-lg leading-8 text-slate-600">
+                  I help businesses automate workflows, integrate AI capabilities, and build scalable backend systems that save time, reduce manual work, and drive real results.
+                </p>
+                <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <Link href="/contact" className="inline-flex min-w-[176px] items-center justify-center gap-3 rounded-2xl bg-orange-500 px-8 py-4 text-base font-semibold text-white shadow-[0_20px_40px_rgba(249,115,22,0.26)] transition hover:bg-orange-600">
+                    Work With Me
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                  <Link href="/projects" className="inline-flex min-w-[176px] items-center justify-center gap-3 rounded-2xl border border-[#e9d4bf] bg-white/88 px-8 py-4 text-base font-semibold text-slate-700 transition hover:bg-white">
+                    View My Work
+                    <span aria-hidden="true" className="text-orange-500">&lt;/&gt;</span>
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="rounded-[40px] border border-slate-200 bg-white p-8 shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Automate. Scale. Optimize.</p>
-                    <p className="mt-3 text-xl font-semibold text-slate-950">Intelligent workflow engine</p>
-                  </div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                    Live Preview
-                  </div>
-                </div>
-                <div className="rounded-[32px] bg-slate-950 text-white p-6 mb-6 shadow-lg shadow-slate-950/10">
-                  <pre className="text-sm leading-6 overflow-x-auto font-mono text-slate-100">
-{`def intelligent_system(workflow):
-  ai_agent = Agent(workflow)
-  result = ai_agent.execute()
-  return result`}
-                  </pre>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                    <p className="text-sm font-semibold text-primary">AI Agent</p>
-                    <p className="mt-2 text-sm text-slate-500">Autonomous execution</p>
-                  </div>
-                  <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                    <p className="text-sm font-semibold text-primary">Workflow</p>
-                    <p className="mt-2 text-sm text-slate-500">Automated orchestration</p>
-                  </div>
-                  <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                    <p className="text-sm font-semibold text-primary">Notify</p>
-                    <p className="mt-2 text-sm text-slate-500">Real-time feedback</p>
-                  </div>
-                  <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                    <p className="text-sm font-semibold text-primary">Store</p>
-                    <p className="mt-2 text-sm text-slate-500">Persistent insights</p>
-                  </div>
-                </div>
+            <div className="absolute inset-x-0 bottom-8 z-10 px-4 sm:px-6 lg:bottom-6 lg:px-8">
+              <div className="ml-auto w-full max-w-[28rem] text-center lg:mr-8">
+                <p className="text-sm font-medium uppercase tracking-[0.45em] text-slate-700">
+                  Automate <span className="mx-3 text-orange-400">•</span> Optimize <span className="mx-3 text-orange-400">•</span> Scale
+                </p>
+                <p className="mt-2 text-sm font-medium uppercase tracking-[0.38em] text-orange-500">
+                  Build Smarter. Grow Faster.
+                </p>
               </div>
             </div>
           </div>
@@ -109,16 +92,16 @@ export default function Home() {
       </section>
 
       {/* Problems Solved */}
-      <section className="py-20 bg-[#f8f4ef]">
+      <section className="py-20 bg-[#fcf7f2]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold">Problems I Solve</p>
             <h2 className="text-3xl md:text-4xl font-bold mt-4">Engineering outcomes that matter</h2>
-            <p className="max-w-3xl mx-auto text-gray-600 mt-4">
-              I focus on solving the most critical product and platform challenges that slow engineering velocity, reduce reliability, and block growth.
+            <p className="max-w-3xl mx-auto text-slate-600 mt-4">
+              I design solutions that create measurable impact across engineering and business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5">
             {[
               {
                 icon: '⚡',
@@ -126,30 +109,30 @@ export default function Home() {
                 desc: 'Accelerate development with AI-assisted workflows, automation and reusable architectures.'
               },
               {
-                icon: '🔒',
-                title: 'Security & Compliance',
-                desc: 'Enforce secure coding standards, OWASP practices and operational controls.'
+                icon: '🧩',
+                title: 'Business Automation',
+                desc: 'Automate repetitive workflows, approvals, data processing and operational tasks.'
               },
               {
                 icon: '☁️',
                 title: 'System Scalability',
-                desc: 'Design systems that handle high throughput, concurrency, and large data volumes.'
+                desc: 'Design systems that handle millions of records and concurrent users with confidence.'
               },
               {
-                icon: '🤖',
-                title: 'AI Integration',
-                desc: 'Leverage GPT, Claude, and Gemini for intelligent automation and decision workflows.'
+                icon: '🛡️',
+                title: 'Reliability & Observability',
+                desc: 'Improve system reliability with proactive monitoring, logging, and fast incident response.'
               },
               {
-                icon: '🚀',
-                title: 'DevOps & CI/CD',
-                desc: 'Streamline releases with Docker, GitHub Actions, and infrastructure-as-code.'
+                icon: '☁️',
+                title: 'Cost Optimization',
+                desc: 'Reduce infrastructure and operational costs through better architecture and automation.'
               },
             ].map((problem, idx) => (
-              <div key={idx} className="bg-white rounded-[32px] border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{problem.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-primary">{problem.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{problem.desc}</p>
+              <div key={idx} className="rounded-[10px] border border-slate-200 bg-white p-6 text-center shadow-sm shadow-slate-100">
+                <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-2xl text-orange-600">{problem.icon}</div>
+                <h3 className="text-base md:text-lg font-semibold mb-3 text-slate-950">{problem.title}</h3>
+                <p className="text-sm leading-6 text-slate-600">{problem.desc}</p>
               </div>
             ))}
           </div>
@@ -168,7 +151,13 @@ export default function Home() {
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {featuredProjects.map((project, idx) => (
-              <Link key={project.id} href={`/projects/${project.slug}`}>
+              <a
+                key={project.id}
+                href={project.externalUrl || `/projects/${project.slug}`}
+                target={project.externalUrl ? '_blank' : undefined}
+                rel={project.externalUrl ? 'noreferrer noopener' : undefined}
+                className="block"
+              >
                 <div className="group rounded-[32px] overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-xl transition h-full">
                   <div className="p-8 h-full flex flex-col">
                     <div className="inline-flex items-center justify-center rounded-full bg-primary/10 text-primary w-12 h-12 mb-5 text-xl font-semibold">
@@ -186,7 +175,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
           <div className="text-center mt-10">
