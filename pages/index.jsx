@@ -47,7 +47,7 @@ export default function Home() {
                   smarter
                 </h1>
                 <p className="mt-7 max-w-[31rem] text-lg leading-8 text-slate-600">
-                  I partner with startups, SMEs, and growing enterprises to design and build AI-powered systems that streamline operations, automate workflows, and scale with business growth. Leveraging over 13 years of experience in software architecture, backend engineering, and system design, I create solutions that connect people, processes, and technology into a seamless ecosystem. Whether it's automating document-heavy workflows, integrating AI capabilities into existing products, or architecting high-performance platforms, my goal is to help businesses operate smarter, faster, and more efficiently.
+                  I help businesses transform manual, time-consuming processes into intelligent, scalable systems by combining AI, automation, & modern software engineering. From document processing & workflow automation to custom AI applications & enterprise-grade backend platforms, I design solutions that eliminate repetitive work, improve operational efficiency, & unlock new opportunities for growth. My focus is not just building software, but creating systems that deliver measurable business impact, reduce costs, & enable teams to focus on higher-value work.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <Link href="/contact" className="inline-flex min-w-[176px] items-center justify-center gap-3 rounded-2xl bg-orange-500 px-8 py-4 text-base font-semibold text-white shadow-[0_20px_40px_rgba(249,115,22,0.26)] transition hover:bg-orange-600">
