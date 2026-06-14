@@ -39,8 +39,8 @@ const nextConfig = {
     ];
   },
 
-  webpack: (config, { dev, isServer }) => {
-    if (dev && !isServer) {
+  webpack: (config, { dev }) => {
+    if (dev) {
       config.watchOptions = {
         ...config.watchOptions,
         ignored: [
@@ -49,6 +49,8 @@ const nextConfig = {
           '**/node_modules/**',
           '**/playwright-report/**',
           '**/test-results/**',
+          '**/coverage/**',
+          '**/tmp/**',
         ],
       };
     }
